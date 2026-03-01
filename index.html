@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OfficeToolsPro - Mobile App Concept</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="preview-bg">
+    <div class="phone-shell">
+      <header class="status-bar">
+        <span>9:41</span>
+        <span class="dot"></span>
+      </header>
+
+      <section class="top-bar">
+        <h1>Home</h1>
+      </section>
+
+      <section class="content" id="homeView">
+        <div class="welcome-row">
+          <div>
+            <p class="muted">Welcome to</p>
+            <h2>OfficeToolsPro</h2>
+          </div>
+          <button class="icon-btn" aria-label="Settings">⚙</button>
+        </div>
+
+        <h3>Quick Actions</h3>
+        <div class="quick-grid">
+          <button class="card action" data-target="pdf">📄<span>Create / Convert PDF</span></button>
+          <button class="card action" data-target="scanner">📷<span>Scan Document</span></button>
+          <button class="card action" data-target="calc">🧮<span>Calculators</span></button>
+          <button class="card action" data-target="image">🖼️<span>Edit Images</span></button>
+        </div>
+
+        <h3>Recent Files</h3>
+        <div class="card recent">
+          <p class="folder">📁</p>
+          <p class="muted">No recent files yet</p>
+        </div>
+      </section>
+
+      <section class="content hidden" id="pdfView">
+        <h3>PDF Creation & Conversion</h3>
+        <ul class="feature-list two-col">
+          <li>Word / Excel / PPT / Text / Image to PDF</li>
+          <li>Scan to PDF</li>
+          <li>PDF to Word / Excel / PPT / Text</li>
+          <li>Batch convert with queue</li>
+          <li>Email & cloud export</li>
+        </ul>
+
+        <h3>PDF Editing Suite</h3>
+        <ul class="feature-list two-col">
+          <li>Merge, split, extract, rearrange pages</li>
+          <li>Delete and rotate pages</li>
+          <li>Add page numbers, watermark/logo</li>
+          <li>Add/remove password + AES encryption</li>
+          <li>Fill & sign + digital signature</li>
+          <li>Annotations, highlights, comments</li>
+          <li>Redaction for sensitive info</li>
+          <li>Compress with quality presets</li>
+          <li>OCR to searchable PDF</li>
+        </ul>
+      </section>
+
+      <section class="content hidden" id="scannerView">
+        <h3>Office Document Scanner</h3>
+        <ul class="feature-list">
+          <li>Multi-page scans with auto edge detection</li>
+          <li>Smart crop + perspective correction</li>
+          <li>Filters: original / B&W / enhanced</li>
+          <li>Output: searchable PDF, editable Word, plain text</li>
+          <li>Receipt, ID card, whiteboard modes</li>
+          <li>Auto naming, folder tags, date indexing</li>
+        </ul>
+      </section>
+
+      <section class="content hidden" id="calcView">
+        <h3>Business & Finance Calculators</h3>
+        <ul class="feature-list two-col">
+          <li>GST</li><li>EMI</li><li>Loan</li><li>SIP</li><li>Compound interest</li>
+          <li>Tax slab</li><li>Profit margin</li><li>Break-even</li><li>Salary</li><li>Overtime</li>
+          <li>Currency converter (live rates)</li>
+          <li>Invoice total & discount calculator</li>
+        </ul>
+      </section>
+
+      <section class="content hidden" id="imageView">
+        <h3>Image Tools</h3>
+        <ul class="feature-list">
+          <li>Resize and compress images</li>
+          <li>Adjust brightness, contrast, saturation</li>
+          <li>Crop, rotate, perspective fix</li>
+          <li>Convert PNG/JPG/WEBP/HEIC</li>
+          <li>Background cleanup and document enhance</li>
+        </ul>
+      </section>
+
+      <nav class="bottom-nav">
+        <button class="tab active" data-target="home">🏠<span>Home</span></button>
+        <button class="tab" data-target="pdf">📄<span>PDF Tools</span></button>
+        <button class="tab" data-target="scanner">⌗<span>Scanner</span></button>
+        <button class="tab" data-target="calc">🧮<span>Calculators</span></button>
+        <button class="tab" data-target="image">🖼️<span>Images</span></button>
+      </nav>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
