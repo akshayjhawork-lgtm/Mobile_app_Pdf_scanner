@@ -1,34 +1,40 @@
-# Office ToolsPro Design Replica
+# Office ToolsPro (Android/iOS App)
 
-## How to test locally
-1. Start a local server:
+This repository is now configured as a **React Native Expo mobile app** (not just a web mock).
+
+## What this means
+- ✅ Runs as a mobile app on **Android**
+- ✅ Runs as a mobile app on **iOS**
+- ✅ Uses native React Native UI components
+
+## Run locally
+1. Install dependencies:
    ```bash
-   python3 -m http.server 4173 --bind 127.0.0.1
+   npm install
    ```
-2. Open in browser:
-   - `http://127.0.0.1:4173`
-3. Verify:
-   - All 9 phone layouts are visible.
-   - Each screen has a blue ad banner area at the bottom.
+2. Start Expo:
+   ```bash
+   npm run start
+   ```
+3. Open on device/emulator:
+   - Android: press `a` in Expo CLI or scan QR with Expo Go
+   - iOS: press `i` in Expo CLI (macOS) or scan QR with Expo Go
 
-## Google Ads integration
-This project now includes Google AdSense placeholders in all banner sections:
-- Add your real publisher ID in `index.html` replacing:
-  - `ca-pub-XXXXXXXXXXXXXXXX`
-- Add your real ad slot replacing:
-  - `1234567890`
+## Build outputs
+- Android build command:
+  ```bash
+  npm run android
+  ```
+- iOS build command:
+  ```bash
+  npm run ios
+  ```
 
-> Important: AdSense will not serve production ads on localhost. Test on an approved domain.
+## Play Store / App Store publishing
+This codebase is mobile-ready, but store publishing still requires store accounts:
+- Google Play Console: one-time fee ($25)
+- Apple Developer Program: yearly fee
 
-## Play Store deployment (realistic requirements)
-You cannot publish to Google Play completely free:
-- Google Play Console requires a one-time **$25 developer registration fee**.
-
-### Recommended path for this UI
-Because this repo is static HTML/CSS, convert it into an Android app wrapper first (e.g., WebView, Capacitor, or Flutter WebView), then:
-1. Build signed Android App Bundle (`.aab`).
-2. Create Play Console app listing.
-3. Complete Data safety, content rating, privacy policy.
-4. Upload `.aab` and submit for review.
-
-If you want, I can create the Android WebView wrapper in this repo next so you can generate a Play Store-ready AAB.
+## Notes on ads
+Current banners are UI placeholders (`Ad Banner Here`).
+For real app ads (AdMob), integrate `react-native-google-mobile-ads` in a follow-up change.
